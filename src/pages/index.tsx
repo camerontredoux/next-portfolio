@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { NextPage } from "next";
+import Head from "next/head";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import { About } from "../components/sections/About";
@@ -35,6 +36,9 @@ const Home: NextPage = () => {
 
   return (
     <div className="selection:bg-sky-50 selection:text-blue-400 px-8 my-12 mx-auto max-w-4xl font-inter font-bold">
+      <Head>
+        <title>Cameron Tredoux - SWE Intern and CS Student</title>
+      </Head>
       <Navigation projInView={projInView} aboutInView={aboutInView} />
       <div className="relative">
         <motion.div

@@ -44,10 +44,6 @@ export const Navigation: React.FC<NavigationProps> = ({
     }
   };
 
-  const handleResumeClick = () => {
-    // window.open(Pdf);
-  };
-
   const links = [
     {
       text: "projects",
@@ -87,12 +83,7 @@ export const Navigation: React.FC<NavigationProps> = ({
       >
         {/* {`${inView}`} */}
         {links.map((link, index) => (
-          <a
-            rel={"noreferrer"}
-            onClick={link.text === "resume" ? handleResumeClick : undefined}
-            href={link.href}
-            key={index}
-          >
+          <a rel={"noreferrer"} href={link.href} key={index}>
             <motion.li className="relative" onClick={() => setSelected(index)}>
               {link.text}
               {index === selected && (
